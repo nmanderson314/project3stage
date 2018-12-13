@@ -1,0 +1,70 @@
+body {
+    text-align: center;
+    width: 45%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Lobster Two', cursive;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.header {
+    width: 788px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.primary-content {
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.bg-1 {
+    background-color: #B23131;
+}
+
+.bg-2 {
+    background-color: #31B282;
+}
+
+.bg-3 {
+    background-color: #7CB231;
+}
+
+.bg-4 {
+    background-color: #4272B1;
+}
+
+.bg-5 {
+    background-color: #984B9D;
+}
+
+.positionElementsParent {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.positionElementsChildren {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#blankMap {
+    z-index:20;
+}
+
+area {
+    cursor: pointer;
+}

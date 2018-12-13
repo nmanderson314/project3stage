@@ -1,0 +1,139 @@
+body {
+    text-align: center;
+}
+
+li {
+    list-style: none;
+    padding: 15px;
+}
+
+p {
+    padding: 15px;
+}
+
+.blue {
+    background-color:  steelblue;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.bg-1 {
+    background-color: steelblue;
+}
+
+.bg-2 {
+    background-color:white;
+}
+
+.main-heading {
+    background-color: white;
+    font-family: 'Bangers', cursive;
+    font-size: 7vw;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.secondary-heading {
+    background-color: white;
+    text-align: left;
+    font-family: 'Bangers', cursive;
+    font-size: 5vw;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.tertiary-heading {
+    flex: 1;
+    font-family: 'Coda', cursive;
+    font-size: 3vw;
+    padding: 15px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    
+}
+
+.row-2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.row-color {
+    background-color:  steelblue;
+}
+
+.col-1 {
+    background-color:  steelblue;
+    flex: 3;
+    
+}
+
+.col-2 {
+    flex: 1;
+    margin: 2%;
+    background-color:  steelblue;
+}
+
+.col-3 {
+    background-color: white;
+    text-align: left;
+    padding: 15px;
+    flex-basis: 40%;
+    margin: 2%;
+    margin-right: auto;
+
+}
+ 
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.location-section {
+    display: flex;
+    align-content: space-between
+}
+
+.location-details {
+    text-align: left;
+    padding: 15px;
+    background-color: white;
+    flex-basis: 60%;
+    margin: 2%;
+    margin-right: auto;
+}
+
+.contact-info {
+    text-align: left;
+    padding: 15px;
+    background-color: white;
+    flex: 2;
+    margin: 2%;
+}
+
+#backToMapBtn {
+    flex: 2;
+    flex: end;
+    height: 8vh;
+    width: 15vw;
+    color: whitesmoke;
+    font-family: 'Coda', cursive;
+    font-size: 2vw;
+    text-decoration: none;
+    background-color: black;
+    padding: 0 auto;
+    border-radius: 15px 50px;
+    border: solid black 2px;
+}
+
+#center {
+    text-align: center;
+}
