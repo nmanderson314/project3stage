@@ -1,18 +1,30 @@
 module.exports = function(sequelize, DataTypes) {
-  var User = sequelize.define("User", {
+  var Users = sequelize.define("Users", {
     // Giving the Users model a name of type STRING
-    ID:{
+    id:{
       type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true
     },
-    USERNAME: {
-      type: DataTypes.STRING
+    username: {
+      type: DataTypes.STRING,
     },
-    PASSWORD:{
+    name: {
+      type: DataTypes.STRING,
+    },
+    email: {
+      type: DataTypes.STRING,
+    },
+    bio:{
       type: DataTypes.STRING
     }
   });
 
-  return User;
+  // Users.associate = function(models) {
+  //   // Associating Users with photos
+  //   // When an Users is deleted, also delete any associated photos
+  //   Users.hasMany(models.Photos);
+  // };
+
+  return Users;
 };

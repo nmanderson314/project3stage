@@ -1,6 +1,10 @@
-localStorage.clear();
+var selection;
 
-function populateStorage(x) {
-    localStorage.setItem('neighborhoodStorage', x);
-    window.location.href = 'detailPage.html';
-}
+$("noda").click(function(){
+    console.log(this.id);
+    console.log("clicked within neighborhoodSelect")
+    selection = "something";
+});
+
+  
+module.exports = selection;

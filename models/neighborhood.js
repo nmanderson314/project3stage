@@ -45,6 +45,10 @@ module.exports = function(sequelize, DataTypes)
       }
     });
 
+    Neighborhood.associate = function(models) {
+      // Associating Markers with photos
+      Neighborhood.hasMany(models.Locations);
+    };
     return Neighborhood;
   };
   

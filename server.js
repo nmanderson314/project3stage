@@ -22,7 +22,11 @@ app.use(express.static("./public"));
 
 
 
+<<<<<<< HEAD
 // require('./config/passport')(passport);
+=======
+//require('./config/passport')(passport);
+>>>>>>> d6e54a10f637c8cf2f6b25c2b3b4305da984920e
 
 app.use(morgan('dev'));
 app.use(cookieParser());
