@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/detailPage.css">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Lobster+Two|Monoton|Coda" rel="stylesheet">
+    <title>Stomping Ground/Neighborhood Details</title>
+</head>
+
+<body>
+
+    <h1 class="main-heading">Stomping Ground</h1>
+
+    <div class="container bg-1">
+
+        <!-- flex container -->
+
+        <div class="row">
+
+            <!-- flex item 1 -->
+
+            <div class="col-1">
+                <h2 id="hoodName" class="secondary-heading" style="background-color:steelblue;">NoDa</h2>
+            </div>
+
+            <!-- flex item 2 -->
+
+            <div class="col-2">
+                    <button id="backToMapBtn">Back to Map</button>
+            </div>
+        </div>
+
+        <!-- Neighborhood banner image -->
+
+        <div>
+            <img id="banner" class="responsive" src="https://www.richandbennett.com/wp-content/themes/richandbennett/images/city.jpg" alt="black and white photo of charlotte skyline">
+        </div>
+
+        <!-- flex container -->
+
+        <div class="row-2">
+
+            <!-- flex item 1 -->
+
+            <div class="col-3 bg-color">
+                <h3 class="tertiary-heading">Overview</h3>
+                <p id="hoodOverview">some content will go here such as a short description of the neighborhood etc...</p>
+            </div>
+
+            <!-- flex item 2 -->
+            <div class="col-2">
+            <img id="borderImg" class="responsive" src="https://www.charlottefive.com/wp-content/uploads/2017/04/NoDa-Charlotte_Savvy-Co-Real-Estate.jpg">
+            </div>
+
+        </div>
+
+        <div class=" bg-color">
+
+        <h4 id="center" class="secondary-heading">Haunts</h4>
+        <h3 id="locationName" class="tertiary-heading">Location Name</h3>
+            <img id="locationPhoto" class="responsive" src="https://www.leighsells.com/wp-content/uploads/2015/05/noda-feat.png">
+
+            <div class="location-section">
+
+                <div class="location-details">
+                    <h5 class="tertiary-heading">Location info / Notes</h5>
+                    <p>some information / description</p>
+                </div>
+                <div class="contact-info">
+                    <ul>
+                        <li id="locationPhone">Phone</li>
+                        <li id="locationUrl">Website</li>
+                        <li id="locationAddress">Address</li>
+                        <li id="locationHours">Hours</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <h5 id="center" class="secondary-heading">Community Thoughts</h5>
+
+
+        <div class="comments-section">
+            <div id="comments">
+                <!-- dynamic content -->
+            </div>
+            <div>
+                <form>
+                    <label for="post">Live here? Leave a comment!</label>
+                    <input id="userComment" type="text-area">
+                    <button id="postBtn" type="submit">Post Comment</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/zillow.js"></script>
+    <script src="assets/javascript/neighborhoodSet.js"></script>
+    <script src="assets/javascript/details.js"></script>
+    <script src="assets/javascript/haunts.js"></script>
+    
+
+</body>
+
+</html>
+
+<!-- IDs: -->
+
+<!-- Main Page Section -->
+
+<!-- Neighborhood name: #hoodName -->
+<!-- Neighborhood banner img: #banner -->
+<!-- Neightborhood overview text: #hoodOverview -->
+<!-- Neighborhood borders map: #borderImg -->
+
+<!-- Haunts Section -->
+
+<!-- Location Overview: #hoodOverview -->
+<!-- Location Photo: #locationPhoto -->
+<!-- Location Details: #locationDetails -->
+
+<!-- Location Contact Info: -->
+
+<!-- #locationPhone -->
+<!-- #locationUrl -->
+<!-- #locationAddress -->
+<!-- #locationHours -->
+
+<!-- Comments Section -->
+
+<!-- User's Comment: userComment -->
+<!-- Post Comment Button: PostBtn -->
+

@@ -6,100 +6,76 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/css/map.css">
     <link href="https://fonts.googleapis.com/css?family=Bangers|Lobster+Two|Monoton" rel="stylesheet">
-
     <title>Stomping Ground Know Your City</title>
 </head>
 <body>
-        
+
     <div class="header">
         <h1 id="mainHeading">Stomping Ground</h1>
         <h2>Know Your City</h2>
     </div>
-
     <div class="primary-content">
-
         <!-- original image -->
-
-        <img class="positionElementsParent" id="blankMap"  onmouseout="resetZindex(blankMap)" src="assets/images/MapofClt.png" alt="a map of CLT" usemap="#cityMap">
-
+        <img class="positionElementsParent" id="blankMap" onmouseout="resetZindex(blankMap)" src="assets/images/MapofClt.png" alt="a map of CLT" usemap="#cityMap">
         <map name="cityMap">
-            <area id="noda" onmouseover="getCoords(noda)"  alt="Noda" title="Noda" href="detailPage.html" coords="564,276,610,262,646,254,661,255,696,252,699,263,670,270,653,280,638,287,633,302,622,313,616,325,607,327,603,313,592,304,581,300,573,297,570,287" shape="poly">
-            <area id="uptown" onmouseover="getCoords(uptown)" alt="Uptown" title="Uptown" href="detailPage.html" coords="327,390,341,373,350,356,363,342,401,303,413,284,440,310,457,329,481,350,505,371,513,387,507,404,491,418,481,426,472,435,459,439,442,434,420,416,397,399,378,391" shape="poly">
-            <area id="southend" onmouseover="getCoords(southend)" alt="Southend" title="Southend" href="detailPage.html" coords="401,411,379,399,360,396,339,396,319,395,304,412,298,421,314,426,333,435,359,444,379,421,389,412" shape="poly">
-            <area id="dilworth" onmouseover="getCoords(dilworth)" alt="Dilworth" title="Dilworth" href="detailPage.html" coords="402,411,387,415,370,433,359,447,340,475,328,491,352,501,368,503,378,509,442,511,453,496,457,480,460,448,439,439,424,428" shape="poly">
-            <area id="plaza" onmouseover="getCoords(plaza)" alt="Plaza" title="Plaza" href="detailPage.html" coords="626,310,630,319,652,335,663,350,662,365,657,382,651,396,644,413,618,409,608,404,590,402,549,402,564,380,569,373,568,365,576,360,579,345,589,332,606,327,617,324,621,317" shape="poly">
+            <area id="noda" onmouseover="getCoords(noda)" alt="Noda" title="Noda" onclick="populateStorage('1')" coords="564,276,610,262,646,254,661,255,696,252,699,263,670,270,653,280,638,287,633,302,622,313,616,325,607,327,603,313,592,304,581,300,573,297,570,287" shape="poly">
+            <area id="uptown" onmouseover="getCoords(uptown)" alt="Uptown" title="Uptown" onclick="populateStorage('3')" coords="327,390,341,373,350,356,363,342,401,303,413,284,440,310,457,329,481,350,505,371,513,387,507,404,491,418,481,426,472,435,459,439,442,434,420,416,397,399,378,391" shape="poly">
+            <area id="southend" onmouseover="getCoords(southend)" alt="Southend" title="Southend" onclick="populateStorage('5')" coords="401,411,379,399,360,396,339,396,319,395,304,412,298,421,314,426,333,435,359,444,379,421,389,412" shape="poly">
+            <area id="dilworth" onmouseover="getCoords(dilworth)" alt="Dilworth" title="Dilworth" onclick="populateStorage('4')" coords="402,411,387,415,370,433,359,447,340,475,328,491,352,501,368,503,378,509,442,511,453,496,457,480,460,448,439,439,424,428" shape="poly">
+            <area id="plaza" onmouseover="getCoords(plaza)" alt="Plaza" title="Plaza" onclick="populateStorage('2')" coords="626,310,630,319,652,335,663,350,662,365,657,382,651,396,644,413,618,409,608,404,590,402,549,402,564,380,569,373,568,365,576,360,579,345,589,332,606,327,617,324,621,317" shape="poly">
         </map>
-
         <!-- noda -->
-
-        <img class="positionElementsChildren" id="highlightNoda" onmouseout="resetZindex(highlightNoda)" src="assets/images/Noda.png" alt="map with noda highlighted" onclick="goToDetail()" usemap="#cityMap">
-
+        <img class="positionElementsChildren" id="highlightNoda" onmouseout="resetZindex(highlightNoda)" src="assets/images/Noda.png" alt="map with noda highlighted" usemap="#cityMap">
         <map name="cityMap">
-            <area id="noda" onmouseover="getCoords(noda)"  alt="Noda" title="Noda" href="detailPage.html" coords="564,276,610,262,646,254,661,255,696,252,699,263,670,270,653,280,638,287,633,302,622,313,616,325,607,327,603,313,592,304,581,300,573,297,570,287" shape="poly">
-            <area id="uptown" onmouseover="getCoords(uptown)" alt="Uptown" title="Uptown" href="detailPage.html" coords="327,390,341,373,350,356,363,342,401,303,413,284,440,310,457,329,481,350,505,371,513,387,507,404,491,418,481,426,472,435,459,439,442,434,420,416,397,399,378,391" shape="poly">
-            <area id="southend" onmouseover="getCoords(southend)" alt="Southend" title="Southend" href="detailPage.html" coords="401,411,379,399,360,396,339,396,319,395,304,412,298,421,314,426,333,435,359,444,379,421,389,412" shape="poly">
-            <area id="dilworth" onmouseover="getCoords(dilworth)" alt="Dilworth" title="Dilworth" href="detailPage.html" coords="402,411,387,415,370,433,359,447,340,475,328,491,352,501,368,503,378,509,442,511,453,496,457,480,460,448,439,439,424,428" shape="poly">
-            <area id="plaza" onmouseover="getCoords(plaza)" alt="Plaza" title="Plaza" href="detailPage.html" coords="626,310,630,319,652,335,663,350,662,365,657,382,651,396,644,413,618,409,608,404,590,402,549,402,564,380,569,373,568,365,576,360,579,345,589,332,606,327,617,324,621,317" shape="poly">
+            <area id="noda" onmouseover="getCoords(noda)" alt="Noda" title="Noda" onclick="populateStorage('1')" coords="564,276,610,262,646,254,661,255,696,252,699,263,670,270,653,280,638,287,633,302,622,313,616,325,607,327,603,313,592,304,581,300,573,297,570,287" shape="poly">
+            <area id="uptown" onmouseover="getCoords(uptown)" alt="Uptown" title="Uptown" onclick="populateStorage('3')" coords="327,390,341,373,350,356,363,342,401,303,413,284,440,310,457,329,481,350,505,371,513,387,507,404,491,418,481,426,472,435,459,439,442,434,420,416,397,399,378,391" shape="poly">
+            <area id="southend" onmouseover="getCoords(southend)" alt="Southend" title="Southend" onclick="populateStorage('5')" coords="401,411,379,399,360,396,339,396,319,395,304,412,298,421,314,426,333,435,359,444,379,421,389,412" shape="poly">
+            <area id="dilworth" onmouseover="getCoords(dilworth)" alt="Dilworth" title="Dilworth" onclick="populateStorage('4')" coords="402,411,387,415,370,433,359,447,340,475,328,491,352,501,368,503,378,509,442,511,453,496,457,480,460,448,439,439,424,428" shape="poly">
+            <area id="plaza" onmouseover="getCoords(plaza)" alt="Plaza" title="Plaza" onclick="populateStorage('2')" coords="626,310,630,319,652,335,663,350,662,365,657,382,651,396,644,413,618,409,608,404,590,402,549,402,564,380,569,373,568,365,576,360,579,345,589,332,606,327,617,324,621,317" shape="poly">
         </map>
-
         <!-- plaza -->
-
-        <img class="positionElementsChildren" id="highlightPlaza" onmouseout="resetZindex(highlightPlaza)" src="assets/images/plaza.png" alt="map with plaza highlighted" onclick="goToDetail()" usemap="#cityMap">
-
+        <img class="positionElementsChildren" id="highlightPlaza" onmouseout="resetZindex(highlightPlaza)" src="assets/images/plaza.png" alt="map with plaza highlighted" usemap="#cityMap">
         <map name="cityMap">
-            <area id="noda" onmouseover="getCoords(noda)"  alt="Noda" title="Noda" href="detailPage.html" coords="564,276,610,262,646,254,661,255,696,252,699,263,670,270,653,280,638,287,633,302,622,313,616,325,607,327,603,313,592,304,581,300,573,297,570,287" shape="poly">
-            <area id="uptown" onmouseover="getCoords(uptown)" alt="Uptown" title="Uptown" href="detailPage.html" coords="327,390,341,373,350,356,363,342,401,303,413,284,440,310,457,329,481,350,505,371,513,387,507,404,491,418,481,426,472,435,459,439,442,434,420,416,397,399,378,391" shape="poly">
-            <area id="southend" onmouseover="getCoords(southend)" alt="Southend" title="Southend" href="detailPage.html" coords="401,411,379,399,360,396,339,396,319,395,304,412,298,421,314,426,333,435,359,444,379,421,389,412" shape="poly">
-            <area id="dilworth" onmouseover="getCoords(dilworth)" alt="Dilworth" title="Dilworth" href="detailPage.html" coords="402,411,387,415,370,433,359,447,340,475,328,491,352,501,368,503,378,509,442,511,453,496,457,480,460,448,439,439,424,428" shape="poly">
-            <area id="plaza" onmouseover="getCoords(plaza)" alt="Plaza" title="Plaza" href="detailPage.html" coords="626,310,630,319,652,335,663,350,662,365,657,382,651,396,644,413,618,409,608,404,590,402,549,402,564,380,569,373,568,365,576,360,579,345,589,332,606,327,617,324,621,317" shape="poly">
+            <area id="noda" onmouseover="getCoords(noda)" alt="Noda" title="Noda" onclick="populateStorage('1')" coords="564,276,610,262,646,254,661,255,696,252,699,263,670,270,653,280,638,287,633,302,622,313,616,325,607,327,603,313,592,304,581,300,573,297,570,287" shape="poly">
+            <area id="uptown" onmouseover="getCoords(uptown)" alt="Uptown" title="Uptown" onclick="populateStorage('3')" coords="327,390,341,373,350,356,363,342,401,303,413,284,440,310,457,329,481,350,505,371,513,387,507,404,491,418,481,426,472,435,459,439,442,434,420,416,397,399,378,391" shape="poly">
+            <area id="southend" onmouseover="getCoords(southend)" alt="Southend" title="Southend" onclick="populateStorage('5')" coords="401,411,379,399,360,396,339,396,319,395,304,412,298,421,314,426,333,435,359,444,379,421,389,412" shape="poly">
+            <area id="dilworth" onmouseover="getCoords(dilworth)" alt="Dilworth" title="Dilworth" onclick="populateStorage('4')" coords="402,411,387,415,370,433,359,447,340,475,328,491,352,501,368,503,378,509,442,511,453,496,457,480,460,448,439,439,424,428" shape="poly">
+            <area id="plaza" onmouseover="getCoords(plaza)" alt="Plaza" title="Plaza" onclick="populateStorage('2')" coords="626,310,630,319,652,335,663,350,662,365,657,382,651,396,644,413,618,409,608,404,590,402,549,402,564,380,569,373,568,365,576,360,579,345,589,332,606,327,617,324,621,317" shape="poly">
         </map>
-
         <!-- uptown -->
-
-        <img class="positionElementsChildren" id="highlightUptown" onmouseout="resetZindex(highlightUptown)" src="assets/images/uptown.png" alt="map with uptown highlighted" onclick="goToDetail()" usemap="#cityMap">
-
+        <img class="positionElementsChildren" id="highlightUptown" onmouseout="resetZindex(highlightUptown)" src="assets/images/uptown.png" alt="map with uptown highlighted" usemap="#cityMap">
         <map name="cityMap">
-            <area id="noda" onmouseover="getCoords(noda)"  alt="Noda" title="Noda" href="detailPage.html" coords="564,276,610,262,646,254,661,255,696,252,699,263,670,270,653,280,638,287,633,302,622,313,616,325,607,327,603,313,592,304,581,300,573,297,570,287" shape="poly">
-            <area id="uptown" onmouseover="getCoords(uptown)" alt="Uptown" title="Uptown" href="detailPage.html" coords="327,390,341,373,350,356,363,342,401,303,413,284,440,310,457,329,481,350,505,371,513,387,507,404,491,418,481,426,472,435,459,439,442,434,420,416,397,399,378,391" shape="poly">
-            <area id="southend" onmouseover="getCoords(southend)" alt="Southend" title="Southend" href="detailPage.html" coords="401,411,379,399,360,396,339,396,319,395,304,412,298,421,314,426,333,435,359,444,379,421,389,412" shape="poly">
-            <area id="dilworth" onmouseover="getCoords(dilworth)" alt="Dilworth" title="Dilworth" href="detailPage.html" coords="402,411,387,415,370,433,359,447,340,475,328,491,352,501,368,503,378,509,442,511,453,496,457,480,460,448,439,439,424,428" shape="poly">
-            <area id="plaza" onmouseover="getCoords(plaza)" alt="Plaza" title="Plaza" href="detailPage.html" coords="626,310,630,319,652,335,663,350,662,365,657,382,651,396,644,413,618,409,608,404,590,402,549,402,564,380,569,373,568,365,576,360,579,345,589,332,606,327,617,324,621,317" shape="poly">
+            <area id="noda" onmouseover="getCoords(noda)" alt="Noda" title="Noda" onclick="populateStorage('1')" coords="564,276,610,262,646,254,661,255,696,252,699,263,670,270,653,280,638,287,633,302,622,313,616,325,607,327,603,313,592,304,581,300,573,297,570,287" shape="poly">
+            <area id="uptown" onmouseover="getCoords(uptown)" alt="Uptown" title="Uptown" onclick="populateStorage('3')" coords="327,390,341,373,350,356,363,342,401,303,413,284,440,310,457,329,481,350,505,371,513,387,507,404,491,418,481,426,472,435,459,439,442,434,420,416,397,399,378,391" shape="poly">
+            <area id="southend" onmouseover="getCoords(southend)" alt="Southend" title="Southend" onclick="populateStorage('5')" coords="401,411,379,399,360,396,339,396,319,395,304,412,298,421,314,426,333,435,359,444,379,421,389,412" shape="poly">
+            <area id="dilworth" onmouseover="getCoords(dilworth)" alt="Dilworth" title="Dilworth" onclick="populateStorage('4')" coords="402,411,387,415,370,433,359,447,340,475,328,491,352,501,368,503,378,509,442,511,453,496,457,480,460,448,439,439,424,428" shape="poly">
+            <area id="plaza" onmouseover="getCoords(plaza)" alt="Plaza" title="Plaza" onclick="populateStorage('2')" coords="626,310,630,319,652,335,663,350,662,365,657,382,651,396,644,413,618,409,608,404,590,402,549,402,564,380,569,373,568,365,576,360,579,345,589,332,606,327,617,324,621,317" shape="poly">
         </map>
-
         <!-- dilworth -->
-
-        <img class="positionElementsChildren" id="highlightDilworth" onmouseout="resetZindex(highlightDilworth)" src="assets/images/dilworth.png" alt="map with dilworth highlighted" onclick="goToDetail()" usemap="#cityMap">
-
+        <img class="positionElementsChildren" id="highlightDilworth" onmouseout="resetZindex(highlightDilworth)" src="assets/images/dilworth.png" alt="map with dilworth highlighted" usemap="#cityMap">
         <map name="cityMap">
-            <area id="noda" onmouseover="getCoords(noda)"  alt="Noda" title="Noda" href="detailPage.html" coords="564,276,610,262,646,254,661,255,696,252,699,263,670,270,653,280,638,287,633,302,622,313,616,325,607,327,603,313,592,304,581,300,573,297,570,287" shape="poly">
-            <area id="uptown" onmouseover="getCoords(uptown)" alt="Uptown" title="Uptown" href="detailPage.html" coords="327,390,341,373,350,356,363,342,401,303,413,284,440,310,457,329,481,350,505,371,513,387,507,404,491,418,481,426,472,435,459,439,442,434,420,416,397,399,378,391" shape="poly">
-            <area id="southend" onmouseover="getCoords(southend)" alt="Southend" title="Southend" href="detailPage.html" coords="401,411,379,399,360,396,339,396,319,395,304,412,298,421,314,426,333,435,359,444,379,421,389,412" shape="poly">
-            <area id="dilworth" onmouseover="getCoords(dilworth)" alt="Dilworth" title="Dilworth" href="detailPage.html" coords="402,411,387,415,370,433,359,447,340,475,328,491,352,501,368,503,378,509,442,511,453,496,457,480,460,448,439,439,424,428" shape="poly">
-            <area id="plaza" onmouseover="getCoords(plaza)" alt="Plaza" title="Plaza" href="detailPage.html" coords="626,310,630,319,652,335,663,350,662,365,657,382,651,396,644,413,618,409,608,404,590,402,549,402,564,380,569,373,568,365,576,360,579,345,589,332,606,327,617,324,621,317" shape="poly">
+            <area id="noda" onmouseover="getCoords(noda)" alt="Noda" title="Noda" onclick="populateStorage('1')" coords="564,276,610,262,646,254,661,255,696,252,699,263,670,270,653,280,638,287,633,302,622,313,616,325,607,327,603,313,592,304,581,300,573,297,570,287" shape="poly">
+            <area id="uptown" onmouseover="getCoords(uptown)" alt="Uptown" title="Uptown" onclick="populateStorage('3')" coords="327,390,341,373,350,356,363,342,401,303,413,284,440,310,457,329,481,350,505,371,513,387,507,404,491,418,481,426,472,435,459,439,442,434,420,416,397,399,378,391" shape="poly">
+            <area id="southend" onmouseover="getCoords(southend)" alt="Southend" title="Southend" onclick="populateStorage('5')" coords="401,411,379,399,360,396,339,396,319,395,304,412,298,421,314,426,333,435,359,444,379,421,389,412" shape="poly">
+            <area id="dilworth" onmouseover="getCoords(dilworth)" alt="Dilworth" title="Dilworth" onclick="populateStorage('4')" coords="402,411,387,415,370,433,359,447,340,475,328,491,352,501,368,503,378,509,442,511,453,496,457,480,460,448,439,439,424,428" shape="poly">
+            <area id="plaza" onmouseover="getCoords(plaza)" alt="Plaza" title="Plaza" onclick="populateStorage('2')" coords="626,310,630,319,652,335,663,350,662,365,657,382,651,396,644,413,618,409,608,404,590,402,549,402,564,380,569,373,568,365,576,360,579,345,589,332,606,327,617,324,621,317" shape="poly">
         </map>
-
         <!-- southend -->
-
-        <img class="positionElementsChildren" id="highlightSouthend" onmouseout="resetZindex(highlightSouthend)" src="assets/images/southend.png" alt="map with southend highlighted" onclick="goToDetail()" usemap="#cityMap">
-
+        <img class="positionElementsChildren" id="highlightSouthend" onmouseout="resetZindex(highlightSouthend)" src="assets/images/southend.png" alt="map with southend highlighted" usemap="#cityMap">
         <map name="cityMap">
-            <area id="noda" onmouseover="getCoords(noda)"  alt="Noda" title="Noda" href="detailPage.html" coords="564,276,610,262,646,254,661,255,696,252,699,263,670,270,653,280,638,287,633,302,622,313,616,325,607,327,603,313,592,304,581,300,573,297,570,287" shape="poly">
-            <area id="uptown" onmouseover="getCoords(uptown)" alt="Uptown" title="Uptown" href="detailPage.html" coords="327,390,341,373,350,356,363,342,401,303,413,284,440,310,457,329,481,350,505,371,513,387,507,404,491,418,481,426,472,435,459,439,442,434,420,416,397,399,378,391" shape="poly">
-            <area id="southend" onmouseover="getCoords(southend)" alt="Southend" title="Southend" href="detailPage.html" coords="401,411,379,399,360,396,339,396,319,395,304,412,298,421,314,426,333,435,359,444,379,421,389,412" shape="poly">
-            <area id="dilworth" onmouseover="getCoords(dilworth)" alt="Dilworth" title="Dilworth" href="detailPage.html" coords="402,411,387,415,370,433,359,447,340,475,328,491,352,501,368,503,378,509,442,511,453,496,457,480,460,448,439,439,424,428" shape="poly">
-            <area id="plaza" onmouseover="getCoords(plaza)" alt="Plaza" title="Plaza" href="detailPage.html" coords="626,310,630,319,652,335,663,350,662,365,657,382,651,396,644,413,618,409,608,404,590,402,549,402,564,380,569,373,568,365,576,360,579,345,589,332,606,327,617,324,621,317" shape="poly">
+            <area id="noda" onmouseover="getCoords(noda)" alt="Noda" title="Noda" onclick="populateStorage('1')" coords="564,276,610,262,646,254,661,255,696,252,699,263,670,270,653,280,638,287,633,302,622,313,616,325,607,327,603,313,592,304,581,300,573,297,570,287" shape="poly">
+            <area id="uptown" onmouseover="getCoords(uptown)" alt="Uptown" title="Uptown" onclick="populateStorage('3')" coords="327,390,341,373,350,356,363,342,401,303,413,284,440,310,457,329,481,350,505,371,513,387,507,404,491,418,481,426,472,435,459,439,442,434,420,416,397,399,378,391" shape="poly">
+            <area id="southend" onmouseover="getCoords(southend)" alt="Southend" title="Southend" onclick="populateStorage('5')" coords="401,411,379,399,360,396,339,396,319,395,304,412,298,421,314,426,333,435,359,444,379,421,389,412" shape="poly">
+            <area id="dilworth" onmouseover="getCoords(dilworth)" alt="Dilworth" title="Dilworth" onclick="populateStorage('4')" coords="402,411,387,415,370,433,359,447,340,475,328,491,352,501,368,503,378,509,442,511,453,496,457,480,460,448,439,439,424,428" shape="poly">
+            <area id="plaza" onmouseover="getCoords(plaza)" alt="Plaza" title="Plaza" onclick="populateStorage('2')" coords="626,310,630,319,652,335,663,350,662,365,657,382,651,396,644,413,618,409,608,404,590,402,549,402,564,380,569,373,568,365,576,360,579,345,589,332,606,327,617,324,621,317" shape="poly">
         </map>
-
         <!-- ID's -->
-
         <!-- #cityMap - maps all areas -->
-
         <!-- #noda - coords noda -->
         <!-- #plaza - coords plaza -->
         <!-- #uptown - coords uptown -->
         <!-- #dilworth - coords dilworth -->
         <!-- #southend - coords southend -->
-
         <!-- #blankMap - blank map image -->
         <!-- #highlightNoda - highlighted noda image -->
         <!-- #highlightPlaza - highlighted plaza image -->
@@ -108,13 +84,11 @@
         <!-- #highlightSouthend - highlighted southend image -->
 
 
-        
-
     </div>
-    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>    
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script src="assets/javascript/neighborhoodSelect.js"></script>
     <script src="assets/javascript/map.js"></script>
-    
-   
+
+
 </body>
 </html>

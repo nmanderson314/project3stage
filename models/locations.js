@@ -1,5 +1,11 @@
 module.exports = function(sequelize, DataTypes) {
   var Locations = sequelize.define("Locations", {
+    ID: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+      allowNull: false,
+    },
     LOCATION_NAME: {
       type: DataTypes.STRING,
       allowNull: false

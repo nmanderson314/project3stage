@@ -92,9 +92,15 @@ function getCoords(x) {
 
 // on click
 
-goToDetail = function() {
-    window.location.href = 'detailPage.html';
-    console.log("here")
+goToDetail = function(x) {
+  var nodaDetail = 'detailsNoda.html';
+
+    if (x === nodaDetail) {
+        window.location.href = 'detailsNoda.html';
+
+    } 
+    //window.location.href = 'detailPage.html';
+    console.log(nodaDetail)
 }
 
 // ToDo: 

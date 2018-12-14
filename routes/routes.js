@@ -8,6 +8,10 @@ module.exports = function(app,passport) {
         res.render('login.html');
     });
 
+    app.get('/detailPage', function(req, res) {
+        res.render('detailPage.html');
+    });
+
     app.post('/login', passport.authenticate('local-login', {
         successRedirect : '/',
         failureRedirect : '/login',

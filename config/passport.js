@@ -10,11 +10,11 @@ connection.query('USE ' + dbconfig.database);
 module.exports = function (passport) {
 
     passport.serializeUser(function (user, done) {
-        done(null, user.id);
+        done(null, user.ID);
     });
 
-    passport.deserializeUser(function (id, done) {
-        connection.query("SELECT * FROM user WHERE id = ? ", [id], function (err, rows) {
+    passport.deserializeUser(function (ID, done) {
+        connection.query("SELECT * FROM user WHERE id = ? ", [ID], function (err, rows) {
             done(err, rows[0]);
         });
     });
