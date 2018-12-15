@@ -1,5 +1,3 @@
-// neighborhoodId = require("./neighborhoodSelect");
-neighborhoodId = 1;
 
 function populateHaunts(){
     $.get("/api/locations/" + neighborhoodId, function (data){

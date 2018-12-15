@@ -92,9 +92,21 @@ function getCoords(x) {
 
 // on click
 
+<<<<<<< HEAD
 goToDetail = function() {
     window.location.href = 'detailPage.html';
     console.log("here")
+=======
+goToDetail = function(x) {
+  var nodaDetail = 'detailsNoda.html';
+
+    if (x === nodaDetail) {
+        window.location.href = 'detailsNoda.html';
+
+    } 
+    //window.location.href = 'detailPage.html';
+    console.log(nodaDetail)
+>>>>>>> 75a1ee8deb100c28c069c500ba630c443bd63423
 }
 
 // ToDo: 
